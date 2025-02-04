@@ -49,7 +49,7 @@ export const UserReducer = (state: userType, action: Action): userType => {
     }
 }
 
-export const userContext = createContext<[userType, Dispatch<Action>]>([
+export const UserContext = createContext<[userType, Dispatch<Action>]>([
     {} as userType,
     () => { },
 ]);

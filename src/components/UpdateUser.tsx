@@ -4,13 +4,13 @@ import Modal from '@mui/material/Modal';
 import { TextField } from '@mui/material';
 import { FormEvent, useContext, useRef, useState } from 'react';
 import axios from "axios";
-import { userContext } from './User';
+import { UserContext } from './User';
 import { useNavigate } from 'react-router-dom';
 import { popupUpdateStyle } from './styles';
 
 const UpdateUser = () => {
 
-  const [user, Dispatch] = useContext(userContext)
+  const [user, Dispatch] = useContext(UserContext)
   const firstnameRef = useRef<HTMLInputElement>(null);
   const lastnameRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);

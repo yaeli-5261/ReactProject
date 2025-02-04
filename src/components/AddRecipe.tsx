@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Button, TextField, Container, Typography, Box, IconButton, Paper } from "@mui/material";
 import { AddCircleOutline, RemoveCircleOutline } from "@mui/icons-material";
-import { userContext } from "./User";
+import { UserContext } from "./User";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../store/store";
 import { addRecipe } from "../store/recipeSlice";
@@ -23,7 +23,7 @@ const schema = yup.object().shape({
 
 const AddRecipe = ({ setIsAddingRecipe }: { setIsAddingRecipe: (value: boolean) => void }) => {
 
-  const [user] = useContext(userContext);
+  const [user] = useContext(UserContext);
   const dispatch = useDispatch<AppDispatch>();
 
   const {

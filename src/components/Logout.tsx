@@ -1,10 +1,10 @@
 import { useContext } from "react"
-import { userContext } from "./User"
+import { UserContext } from "./User"
 import { useNavigate } from "react-router-dom"
 
 const Logout = () => {
 
-    const [user, dispatch] = useContext(userContext)
+    const [user, dispatch] = useContext(UserContext)
     const navigate=useNavigate()
    
     dispatch({

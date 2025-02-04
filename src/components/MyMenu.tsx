@@ -3,14 +3,14 @@ import { AppBar, Box, Toolbar, IconButton, Container, Button, Avatar, Menu, Menu
 import MenuIcon from '@mui/icons-material/Menu';
 import {NavLink } from 'react-router-dom';
 import { useContext, useState } from 'react';
-import { userContext } from './User';
+import { UserContext } from './User';
 import {logoStyles } from './styles';
 
 const pages = [{ text: 'Our Recipes', link: '/showRecipes' }, { text: 'Home', link: '/home' }];
 const settings = [{ text: 'Update', link: '/update' }, { text: 'Logout', link: '/logout' }];
 
 const MyMenu = () => {
-  const [user] = useContext(userContext);
+  const [user] = useContext(UserContext);
   const [anchorElNav, setAnchorElNav] = useState<HTMLElement | null>(null);
   const [anchorElUser, setAnchorElUser] = useState<HTMLElement | null>(null);
   const handleOpenNavMenu = (e: React.MouseEvent<HTMLElement>) => setAnchorElNav(e.currentTarget);

@@ -1,11 +1,11 @@
 import { Dispatch, FormEvent, useContext, useRef, useState } from "react";
 import { Button, Modal, Box, TextField, Typography } from "@mui/material";
-import { Action, userContext } from "./User";
+import { Action, UserContext } from "./User";
 import { modalStyle } from "./styles";
 import axios from "axios";
 import Home from "./Home";
 const Login = () => {
-    const [myUser, UsersDispatch] = useContext(userContext);
+    const [myUser, UsersDispatch] = useContext(UserContext);
     const [open, setOpen] = useState(false);
     const [isLogin, setIsLogin] = useState(false);
     const [typeConnection, setTypeConnection] = useState('');
